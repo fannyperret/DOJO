@@ -53,7 +53,7 @@ function calculatrice($a, $operateur, $b)
             $result = $a / $b;
             break;
         default:
-            echo "Veuillez entrer des données correctes pour ma super calculatrice";
+            $result = "Veuillez entrer des données correctes pour ma super calculatrice";
             break;
     }
 
@@ -61,7 +61,7 @@ function calculatrice($a, $operateur, $b)
 
 }
 
-echo calculatrice(4,"+", 9 );
+echo calculatrice(4,"`", 9 );
 
 ?>
 
