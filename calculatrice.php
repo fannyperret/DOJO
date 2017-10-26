@@ -53,11 +53,11 @@ function calculatrice($a, $operateur, $b)
             $result = $a / $b;
             break;
         default:
-            $result = "Veuillez entrer des données correctes pour ma super calculatrice";
+            $result = "Bah non ! Ca ne marche pas ! Tu dois entrer des données correctes pour ma super calculatrice !";
             break;
     }
 
-    return "Grâce à ma super calculette $a $operateur $b est égal à $result";
+    return "Grâce à ma super calculette $a $operateur $b est égal à : $result";
 
 }
 
