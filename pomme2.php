@@ -18,9 +18,11 @@ for($i = 0; $i < $maxPomme; $i++) {
         $poidsPommeJus += $pomme;
     }
 }
-$poidsPommeJus = ($maxPomme - $panier) * $pomme
+$coutFabrication = $poidsPommeJus * $juiceCost;
+$litres = $poidsPommeJus * $coeffTransform;
+$priceJusPomme = ($litres * $priceJuice) + $coutFabrication;
 
 echo "Pommes dans mon panier : " . $panier . PHP_EOL;
 echo "Pommes pour le jus : " . ($maxPomme - $panier) . PHP_EOL;
 echo "Prix du panier : " . round(($poidsPanier / 1000) * $price, 2) . PHP_EOL;
-echo "Pommes dans mon panier : " . $juiceCost . PHP_EOL;
+echo "Prix du jus de pomme : " . round(($priceJusPomme / 1000) * $price,2) . PHP_EOL;
