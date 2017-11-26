@@ -19,16 +19,13 @@ function greeting($firstName, $lastName)
     if($firstName !== "" and $lastName !== "") {
         $result = "Bonjour $lastName $firstName" . PHP_EOL;
     } elseif ($firstName !== "") {
-        $result = "Bonjour $firstName"
- . PHP_EOL;
+        $result = "Bonjour $firstName" . PHP_EOL;
     }
     else {
         $result = "Bonjour toi" . PHP_EOL;
     }
     return $result;
 }
-
-
 
 ?>
 
