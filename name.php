@@ -17,37 +17,16 @@ echo greeting("", "");
 function greeting($firstName, $lastName)
 {
     if($firstName !== "" and $lastName !== "") {
-        $result = "Bonjour $lastName $firstName" . PHP_EOL;
+        return "Bonjour $lastName $firstName" . PHP_EOL;
     } elseif ($firstName !== "") {
-        $result = "Bonjour $firstName" . PHP_EOL;
+        return "Bonjour $firstName" . PHP_EOL;
     }
     else {
-        $result = "Bonjour toi" . PHP_EOL;
+        return "Bonjour toi" . PHP_EOL;
     }
 }
 
 ?>
-
-<!-- CODE AUTRE
-
-
-$firstName = "Jean"; // Toujours DOUBLES GUILLEMETS quand on veut signifier que la fonction EST VIDE
-$lastName = "Dupond";
-
-echo greeting($firstName, $lastName);
-echo greeting("Eric", "");
-echo greeting("", "");
-
-function greeting($firstName, $lastName)
-{
-    if ($firstName !== "" and $lastName !== "") {
-        return "Bonjour $lastName $firstName" . PHP_EOL;
-    } elseif ($firstName !== "") {
-        return "Bonjour $firstName" . PHP_EOL;
-    } else {
-        return "Bonjour toi " . PHP_EOL;
-    }
-}
 
 
 ou autre avec echo

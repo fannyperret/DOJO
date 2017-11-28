@@ -1,19 +1,14 @@
 <?php
 
-$firstName = "Jean"; // Toujours DOUBLES GUILLEMETS quand on veut signifier que la fonction EST VIDE
+$firstName = "Jean";
 $lastName = "Dupond";
 
-echo greeting($firstName, $lastName);
-echo greeting("Eric", "");
-echo greeting("", "");
-
-function greeting($firstName, $lastName)
-{
     if ($firstName !== "" and $lastName !== "") {
-        return "Bonjour $lastName $firstName" . PHP_EOL;
+        echo "Bonjour $lastName $firstName" . PHP_EOL;
     } elseif ($firstName !== "") {
-        return "Bonjour $firstName" . PHP_EOL;
+        echo "Bonjour $firstName" . PHP_EOL;
     } else {
-        return "Bonjour toi " . PHP_EOL;
+        echo "Bonjour toi " . PHP_EOL;
     }
-}
+
+    /* cette solution est moins pratique la solution name.php puisqu'elle est plus courte mais on peut l'améliorer
