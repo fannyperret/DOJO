@@ -24,7 +24,6 @@ function greeting($firstName, $lastName)
     else {
         $result = "Bonjour toi" . PHP_EOL;
     }
-    return $result;
 }
 
 ?>
