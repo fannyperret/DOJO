@@ -34,3 +34,43 @@ un kilo = 200gr X 5 donc 5 X 3 = 15 euros le kilo chez McDo
 
 
  */
+
+class Chips
+{
+    const PERFORMANCE = 3.45; // tonnes à l'hectare
+    const CHIPS_COST = 0.32; // prix de la frite au kilo
+    const PEELING = 3.8; // % poifd retiré par l'épluchage
+    const MACDO_COST = 5.7; // coût fabrication au kilo
+    const MACDO_SELLING = 15; // prix vente au kilo
+
+    public function getFieldPerformance($hectare)
+    {
+        $kilos = $hectare * self::PERFORMANCE * 1000;
+        $cost = ($kilos * self::CHIPS_COST) - (($kilos * self::CHIPS_COST) * (self::PEELING / 100));
+        return round($cost, 2);
+    }
+
+    public function getMacdoMargin()
+    {
+        $result = (self::CHIPS_COST + self::MACDO_COST) / self::MACDO_SELLING;
+        return round(100 - ($result * 100), 2);
+    }
+
+}
+
+$chips = new Chips();
+echo "Performance pour 1 hectare : " . $chips->getFieldPerformance(1) . PHP_EOL;
+echo "Performance pour 1 hectare : " . $chips->getFieldPerformance(5) . PHP_EOL;
+echo "Marge MacDo : " . $chips->getMacdoMargin() . PHP_EOL;
+
+
+
+
+
+
+
+
+
+
+
+
