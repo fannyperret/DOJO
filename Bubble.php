@@ -9,7 +9,7 @@
 
 class Bubble
 {
-    public static function generateArray($number)
+    public static function generateArray($number) // génération du tableau aléatoire
     {
         $result = [];
         for($i = 1; $i <= $number; $i++) {
@@ -27,7 +27,7 @@ class Bubble
         }
         echo PHP_EOL;
     }
-    public static function sort(&$data)
+    public static function sort(&$data) // fonction de tri à bulles
     {
         // on parcourt le tableau du début à la fin.
         // si l'élément n > n+1 on échange n et n+1
